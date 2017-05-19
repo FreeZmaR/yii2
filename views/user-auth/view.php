@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\UserAuth */
 
-$this->title = $model->id;
+$this->title = $model->email;
 $this->params['breadcrumbs'][] = ['label' => 'User Auths', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'login',
-            'password',
+            //'password',
             'email:email',
         ],
     ]) ?>
