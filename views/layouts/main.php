@@ -39,6 +39,7 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
+            Yii::$app->user->isGuest ? "" : (['label' => "Memo", 'url'=> ['/user-memo/index']]),
             ['label' => 'GRUD user', 'url' => ['/user-auth/index']],
             ['label' => 'GRUD calendar', 'url' => ['/calendar/index']],
             ['label' => 'GRUD link', 'url' => ['/link/index']],

@@ -56,6 +56,7 @@ class UserAuth extends \yii\db\ActiveRecord implements IdentityInterface
     }
 
     private $authKey;
+    private static $user_id;
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -105,6 +106,7 @@ class UserAuth extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public function getId()
     {
+        self::$user_id = $this->getPrimaryKey();
         return $this->getPrimaryKey();
     }
 
