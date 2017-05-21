@@ -20,7 +20,7 @@ $user_id = Yii::$app->getUser()->getId();
 
     <?= $form->field($model, 'date_create')->textInput() ?>
 
-    <?= $form->field($model, 'fk_user_id')->textInput(['display'=>'none','value'=> $user_id]) ?>
+    <?= $form->field($model, 'fk_user_id', [])->textInput(['style'=>'display:none','value'=> $user_id]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
